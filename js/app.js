@@ -55,10 +55,14 @@ function checkWinner() {
         resetGame();
 
         break; // Остановить проверку, так как уже есть победитель
-       
-        
       }    
     }
+
+    if (gameBoardX.length + gameBoardO.length === 9) {
+      alert(`Игра окончена вничью!`);
+      gameActive = false;
+      resetGame();
+  }
   }
 //сброс игры после победы
   function resetGame() {
